@@ -59,7 +59,7 @@ Add to /etc/supervisord.conf that lines
      git clone https://github.com/helli0n/kafka-monitoring.git 
      cd zabbix/kafka
      cp jmx_discovery /etc/zabbix/externalscripts
-     cp JMXDiscovery-0.0.1.jar etc/zabbix/externalscripts
+     cp JMXDiscovery-0.0.1.jar /etc/zabbix/externalscripts
 
 ##Import template
 Log in to your zabbix web
