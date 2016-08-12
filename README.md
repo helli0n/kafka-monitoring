@@ -88,8 +88,75 @@ if you have problems you can check JMX using this script
 **eg.:** ./zabb_get_java  zabbix-java-gateway-ip 10052 server-test-ip 12345 
 'jmx[java.lang:type=Threading,PeakThreadCount]'
 
+For monitoring kafka consumers you should install [Burrow](https://github.com/linkedin/Burrow/) daemon and [jq](https://stedolan.github.io/jq/download/) tools on kafka host
+## Clone all stuff 
+     ssh clone https://github.com/helli0n/kafka-monitoring.git
+     cd kafka/kafkaconsumers
+## Install burrow
+     cp -r burrow /opt/
+     cp burrow/ /etc/init.d/burrow_script
+     chkconfig --level 345 burrow_script on
+You should change config file in /opt/burrow/burrow.cfg
+## Install jq 
+     cd /usr/bin
+     wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
+     mv jq-linux64 jq
+     chmod +x jq
+## Check jq
+     # jq 
+     # jq 
+     jq - commandline JSON processor [version 1.5]
+     Usage: jq [options] <jq filter> [file...]
+     jq is a tool for processing JSON inputs, applying the
+     given filter to its JSON text inputs and producing the
+     filter's results as JSON on standard output.
+     The simplest filter is ., which is the identity filter,
+     copying jq's input to its output unmodified (except for
+     formatting).
+     For more advanced filters see the jq(1) manpage ("man jq")
+     and/or https://stedolan.github.io/jq
+     Some of the options include:
+     -c compact instead of pretty-printed output;
+     -n use `null` as the single input value;
+     -e set the exit status code based on the output;
+     -s read (slurp) all inputs into an array; apply filter to it;
+     -r output raw strings, not JSON texts;
+     -R read raw strings, not JSON texts;
+     -C colorize JSON;
+     -M monochrome (don't colorize JSON);
+     -S sort keys of objects on output;
+     --tab use tabs for indentation;
+     --arg a v set variable $a to value <v>;
+     --argjson a v set variable $a to JSON value <v>;
+     --slurpfile a f set variable $a to an array of JSON texts read from <f>;
+     See the manpage for more options.
+## Copy files to zabbix folder
+     cp kafka_consumers.sh /etc/zabbix/
+     cp userparameter_kafkaconsumer.conf /etc/zabbix/zabbix_agentd.d
+     Start burrow and restart zabbix-agent
+     /etc/init.d/burrow_script start
+     /etc/init.d/zabbix-agent restart
+Upload template [zbx_templates_kafkaconsumers.xml](https://github.com/helli0n/kafka-monitoring/blob/master/kafkaconsumers/zbx_templates_kafkaconsumers.xml) and mapping value [zbx_valuemaps_kafkaconsumers.xml](https://github.com/helli0n/kafka-monitoring/blob/master/kafkaconsumers/zbx_valuemaps_kafkaconsumers.xml) to zabbix server using UI and link template to Kafka host
+# Troubleshooting 
+If it doesn't work you can check it use **/etc/zabbix/kafka_consumers.sh**
+e.g.:
+      # /etc/zabbix/kafka_consumers.sh discovery
+     {"data":[{
+     "{#CONSUMER}": "CONSUMER0",
+     "{#PARTITION}": 0,
+     "{#TOPIC}": "TOPIC0"
+     },{
+     "{#CONSUMER}": "CONSUMER1",
+     "{#PARTITION}": 0,
+     "{#TOPIC}": "TOPIC1"
+     }]}
+
+
+
 
 # kafka-monitoring
+http://adminotes.com/
+
 https://github.com/helli0n/kafka-monitoring/wiki/Kafka-monitoring
 
 https://engineering.linkedin.com/apache-kafka/burrow-kafka-consumer-monitoring-reinvented
