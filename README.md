@@ -89,6 +89,11 @@ if you have problems you can check JMX using this script
 'jmx[java.lang:type=Threading,PeakThreadCount]'
 
 For monitoring kafka consumers you should install [Burrow](https://github.com/linkedin/Burrow/) daemon and [jq](https://stedolan.github.io/jq/download/) tools on kafka host
+
+***
+
+# Kafka Consumer Monitoring
+
 ## Clone all stuff 
      ssh clone https://github.com/helli0n/kafka-monitoring.git
      cd kafka/kafkaconsumers
