@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-08-12T06:33:38Z</date>
+    <value_maps>
+        <value_map>
+            <name>Kafka cunsumers status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>NOTFOUND</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>WARN</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>ERR</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>STOP</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>STALL</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
