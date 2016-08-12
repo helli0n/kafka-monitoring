@@ -1,0 +1,104 @@
+#!/bin/sh
+#
+# burrow_script		This shell script takes care of starting and stopping
+#		the burrow_script
+#
+# chkconfig: - 64 36
+# description:	burrow_script
+# processname: burrow_script
+# config: /opt/burrow/burrow.cfg
+# pidfile: /opt/burrow/log/burrow.pid
+### BEGIN INIT INFO
+# Provides: burrow_script
+# Required-Start: $local_fs $remote_fs $network $named $syslog $time
+# Required-Stop: $local_fs $remote_fs $network $named $syslog $time
+# Short-Description: start and stop burrow
+# Description: burrow_script
+### END INIT INFO
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+
+
+dirburrow="/opt/burrow"
+pidckeck(){
+pid=`ps ax | grep burrow |  grep -v grep | grep -v burrow_script | awk '{print $1}'`
+#echo $pid
+}
+start(){
+    pidckeck
+    if [ -z "$pid" ]; then
+        rm -rf $dirburrow/log/burrow.pid
+	echo "Starting burrow"
+	cd $dirburrow && ./burrow --config $dirburrow/burrow.cfg > /dev/null 2>&1 &
+	sleep 3
+	pidckeck
+#	rm -rf $dirburrow/log/burrow.pid
+    if [ -z "$pid" ]; then
+    echo "Fail Start burrow"
+    echo "Read logs for detail"
+    else
+    echo "burrow has started"
+    fi
+ else
+    echo "burrow is already running"
+    echo "PID $pid"
+ fi
+}
+
+stop(){
+pidckeck
+if [ -z "$pid" ]; then
+    echo "burrow isn't running"
+else
+    /bin/kill -9 $pid
+    /bin/rm -rf $dirburrow/log/burrow.pid
+    sleep 3
+    pidckeck
+    if [ -z "$pid" ]; then
+    echo "burrow has stoped"
+    else
+    echo "[WARNING] burrow hasn't stoped"
+    fi
+fi
+}
+
+restart(){
+    stop
+    start
+}
+
+status(){
+pidckeck
+if [ -z "$pid" ]; then
+   echo "burrow isn't running"
+   else
+   echo "burrow is already running"
+   echo "PID $pid"
+   fi
+
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  status)
+    status
+    ;;
+  restart)
+    restart
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|status|restart}"
+    exit 2
+esac
+
+exit $?

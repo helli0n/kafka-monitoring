@@ -1,0 +1,99 @@
+#!/bin/sh
+#
+# kafka-manager	This shell script takes care of starting and stopping
+#		the kafka
+#
+# chkconfig: - 64 36
+# description:	kafka 
+# processname: kafka-manager
+# config: /opt/kafka_2.10-0.8.2.1/conf/application.conf
+### BEGIN INIT INFO
+# Provides: kafka
+# Required-Start: $local_fs $remote_fs $network $named $syslog $time
+# Required-Stop: $local_fs $remote_fs $network $named $syslog $time
+# Short-Description: start and stop kafka-manager
+# Description: kafka
+### END INIT INFO
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+
+
+dirkafka="/opt/kafka_2.10-0.8.2.1"
+pidckeck(){
+pid=`ps ax | grep kafkaServer |  grep -v grep | grep java| awk '{print $1}'`
+}
+start(){
+    pidckeck
+    if [ -z "$pid" ]; then
+	echo "Starting kafka"
+	sh $dirkafka/bin/kafka-server-start.sh $dirkafka/config/server.properties > /dev/null 2>&1 &
+	sleep 3
+	pidckeck
+    if [ -z "$pid" ]; then
+    echo "Fail Start kafka"
+    echo "Read logs for detail"
+    else
+    echo "kafka has started"
+    fi
+ else
+    echo "kafka is already running"
+    echo "PID $pid"
+ fi
+}
+
+stop(){
+pidckeck
+if [ -z "$pid" ]; then
+    echo "kafka isn't running"
+else
+    sh $dirkafka/bin/kafka-server-stop.sh
+    sleep 3
+    pidckeck
+    if [ -z "$pid" ]; then
+    echo "kafka-manager has stopped"
+    else
+    echo "[WARNING] kafka-manager hasn't stoped"
+    fi
+fi
+}
+
+restart(){
+    stop
+    start
+}
+
+status(){
+pidckeck
+if [ -z "$pid" ]; then
+   echo "kafka isn't running"
+   else
+   echo "kafka is already running"
+   echo "PID $pid"
+   fi
+
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  status)
+    status
+    ;;
+  restart)
+    restart
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|status|restart}"
+    exit 2
+esac
+
+exit $?

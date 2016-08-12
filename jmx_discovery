@@ -1,0 +1,3 @@
+#!/bin/bash
+
+java -jar $(dirname $BASH_SOURCE)/JMXDiscovery-0.0.1.jar $1 $2 $3 $4
