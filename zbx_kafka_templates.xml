@@ -57,8 +57,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -100,8 +100,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -143,8 +143,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -186,8 +186,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -229,8 +229,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -272,8 +272,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -315,8 +315,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -358,8 +358,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -401,8 +401,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -444,8 +444,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -487,8 +487,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -530,8 +530,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -573,8 +573,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -616,8 +616,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -659,8 +659,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -702,8 +702,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -745,8 +745,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -788,8 +788,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -831,8 +831,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -874,8 +874,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -917,8 +917,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -960,8 +960,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1003,8 +1003,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1046,8 +1046,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1089,8 +1089,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1132,8 +1132,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1175,8 +1175,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1218,8 +1218,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1261,8 +1261,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1304,8 +1304,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1347,8 +1347,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1390,8 +1390,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1433,8 +1433,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1476,8 +1476,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1519,8 +1519,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1562,8 +1562,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1605,8 +1605,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1648,8 +1648,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1691,8 +1691,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1734,8 +1734,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1777,8 +1777,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1820,8 +1820,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1863,8 +1863,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1906,8 +1906,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1949,8 +1949,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -1992,8 +1992,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2035,8 +2035,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2078,8 +2078,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2121,8 +2121,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2164,8 +2164,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2207,8 +2207,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2250,8 +2250,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2293,8 +2293,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2336,8 +2336,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2379,8 +2379,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2422,8 +2422,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2465,8 +2465,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2508,8 +2508,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2551,8 +2551,8 @@
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2588,8 +2588,8 @@
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2629,8 +2629,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -2681,8 +2681,8 @@
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
-                    <username/>
-                    <password/>
+                    <username>{$JMX_USER}</username>
+                    <password>{$JMX_PASS}</password>
                     <publickey/>
                     <privatekey/>
                     <port/>
@@ -2722,8 +2722,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -2766,8 +2766,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -2810,8 +2810,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -2854,8 +2854,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -2898,8 +2898,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -2942,8 +2942,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -2986,8 +2986,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -3030,8 +3030,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -3074,8 +3074,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -3118,8 +3118,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -3162,8 +3162,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
@@ -3206,8 +3206,8 @@
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
-                            <username/>
-                            <password/>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <publickey/>
                             <privatekey/>
                             <port/>
