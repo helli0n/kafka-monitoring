@@ -2573,7 +2573,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>jmx_discovery[&quot;kafka.cluster:type=Partition,name=UnderReplicated,topic=InReplicationCacheTopic,partition=*&quot;,{HOST.IP}:12345]</key>
+                    <key>jmx_discovery[&quot;kafka.cluster:type=Partition,name=UnderReplicated,topic=InReplicationCacheTopic,partition=*&quot;,{HOST.CONN}:12345,{$JMX_USER},{$JMX_PASS}]</key>
                     <delay>30</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -2666,7 +2666,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>jmx_discovery[&quot;kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic=*&quot;,{HOST.IP}:12345]</key>
+                    <key>jmx_discovery[&quot;kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic=*&quot;,{HOST.CONN}:12345,{$JMX_USER},{$JMX_PASS}]</key>
                     <delay>30</delay>
                     <status>0</status>
                     <allowed_hosts/>
