@@ -52,6 +52,55 @@ Add to /etc/supervisord.conf that lines
      logfile_backups=10
 ## Restart supervisor 
      /etc/init.d/supervisord restart
+
+## Kafka systemd unit
+
+For systemd is possible to use unit like example below.
+For this example kafka is installed in `/usr/local/kafka/kafka_2.11-1.0.0`
+
+```
+[Unit]
+Description=Apache Kafka
+Wants=network.target
+After=network.target
+
+[Service]
+LimitNOFILE=32768
+User=kafka
+
+Environment=JAVA=/usr/bin/java
+Environment="KAFKA_USER=kafka"
+Environment="KAFKA_HOME=/usr/local/kafka/kafka_2.11-1.0.0"
+Environment="SCALA_VERSION=2.11"
+Environment="KAFKA_CONFIG=/usr/local/kafka/config"
+Environment="KAFKA_BIN=/usr/local/kafka/bin"
+Environment="KAFKA_LOG4J_OPTS=-Dlog4j.configuration=file:/usr/local/kafka/config/log4j.properties"
+Environment="KAFKA_OPTS="
+Environment="KAFKA_HEAP_OPTS=-Xmx512M -Xms256M"
+Environment="KAFKA_JVM_PERFORMANCE_OPTS=-server -XX:+UseCompressedOops -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -Djava.awt.headless=true"
+Environment="KAFKA_LOG_DIR=/var/log/kafka"
+Environment="KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.net.preferIPv4Stack=true -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.port=<REPLACE_WITH_YOUR_JMX_PORT> -Dcom.sun.management.jmxremote.rmi.port=<REPLACE_WITH_YOUR_JMX_PORT> -Djava.rmi.server.hostname=<REPLACE_WITH_YOUR_HOSTNAME>"
+
+ExecStart=/usr/local/kafka/bin/kafka-server-start.sh ${KAFKA_CONFIG}/server.properties
+
+SuccessExitStatus=0 143
+
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
+```
+Please pay additional attention on options:
+```
+ -Dcom.sun.management.jmxremote.port=<REPLACE_WITH_YOUR_JMX_PORT>
+ -Dcom.sun.management.jmxremote.rmi.port=<REPLACE_WITH_YOUR_JMX_PORT>
+```
+To avoid using dynamic TCP port and firewall/NAT issues it is better to set static port setting.
+## Restart kafka service
+     systemctl daemon-reload
+     systemctl restart kafka-service
+
 # Zabbix configuration
 
 #Upload scripts for discovery JMX
