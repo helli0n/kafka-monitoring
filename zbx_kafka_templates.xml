@@ -3452,7 +3452,6 @@
         <trigger>
             <expression>{Kafka:jmx[&quot;kafka.server:type=ReplicaManager,name=IsrShrinksPerSec&quot;,&quot;Count&quot;].delta(900)}&lt;&gt;0</expression>
             <name>ISR has decreased in last 15m</name>
-            <recovery_mode>0</recovery_mode>
             <url/>
             <status>1</status>
             <priority>1</priority>
