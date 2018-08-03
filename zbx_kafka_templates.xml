@@ -3420,8 +3420,8 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Kafka:jmx[&quot;kafka.controller:type=ControllerStats,name=LeaderElectionRateAndTimeMs&quot;,&quot;Count&quot;].last()}&lt;&gt;0</expression>
-            <name>Broker are failures</name>
+            <expression>{Kafka:jmx[&quot;kafka.controller:type=ControllerStats,name=LeaderElectionRateAndTimeMs&quot;,&quot;Count&quot;].delta(900)}&lt;&gt;0</expression>
+            <name>Leader election has occurred in last 15m</name>
             <url/>
             <status>1</status>
             <priority>1</priority>
@@ -3431,7 +3431,7 @@
         </trigger>
         <trigger>
             <expression>{Kafka:jmx[&quot;kafka.controller:type=KafkaController,name=ActiveControllerCount&quot;,&quot;Value&quot;].last()}=1</expression>
-            <name>Controller  on broker is active</name>
+            <name>Controller on broker is active</name>
             <url/>
             <status>1</status>
             <priority>1</priority>
@@ -3440,8 +3440,8 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Kafka:jmx[&quot;kafka.server:type=ReplicaManager,name=IsrExpandsPerSec&quot;,&quot;Count&quot;].last()}=0</expression>
-            <name>ISR expansion rate has been changed</name>
+            <expression>{Kafka:jmx[&quot;kafka.server:type=ReplicaManager,name=IsrExpandsPerSec&quot;,&quot;Count&quot;].delta(900)}&lt;&gt;0</expression>
+            <name>ISR has increased in last 15m</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
@@ -3450,8 +3450,8 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Kafka:jmx[&quot;kafka.server:type=ReplicaManager,name=IsrShrinksPerSec&quot;,&quot;Count&quot;].last()}&lt;&gt;0</expression>
-            <name>ISR shrink rate has been changed</name>
+            <expression>{Kafka:jmx[&quot;kafka.server:type=ReplicaManager,name=IsrShrinksPerSec&quot;,&quot;Count&quot;].delta(900)}&lt;&gt;0</expression>
+            <name>ISR has decreased in last 15m</name>
             <url/>
             <status>1</status>
             <priority>1</priority>
@@ -3490,8 +3490,8 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Kafka:jmx[&quot;kafka.controller:type=ControllerStats,name=UncleanLeaderElectionsPerSec&quot;,&quot;Count&quot;].last()}&lt;&gt;0</expression>
-            <name>Unclean leader election rate isn't 0</name>
+            <expression>{Kafka:jmx[&quot;kafka.controller:type=ControllerStats,name=UncleanLeaderElectionsPerSec&quot;,&quot;Count&quot;].delta(900)}&lt;&gt;0</expression>
+            <name>Unclean leader election has occurred last 15m</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
