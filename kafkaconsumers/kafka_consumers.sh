@@ -1,7 +1,7 @@
 #!/bin/sh
 
 host1=`hostname -i`
-curl1="curl -s http://$host1:8000/v2/kafka/local/consumer"
+curl1="curl -s http://$host1:8000/v3/kafka/local/consumer"
 case $1 in
 discovery)
            res=(`$curl1 | jq ".consumers[]" | tr -d '"'`)
