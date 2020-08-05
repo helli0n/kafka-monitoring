@@ -1,5 +1,12 @@
 # Welcome to the kafka-monitoring wiki!
 
+## Requirements
+Solutions tested:<br />
+Zabbix 4.4+<br />
+Kafka 2+<br />
+Burrow<br />
+CMAK
+
 ## First you have to install zabbix-java-gataway
     yum install -y zabbix-java-gataway
 ## Configuring zabbix-java-gataway
@@ -24,14 +31,14 @@ change from
 
     # JMX settings
     if [ -z "$KAFKA_JMX_OPTS" ]; then
-    KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -   Dcom.sun.management.jmxremote.ssl=false "
+    KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false "
     fi
 
 to
 
     # JMX settings
     if [ -z "$KAFKA_JMX_OPTS" ]; then
-    KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=12345 -    Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false "
+    KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=12345 -    Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
     fi
 ## Add Kafka as service
 
@@ -56,7 +63,7 @@ Add to /etc/supervisord.conf that lines
 ## Kafka systemd unit
 
 For systemd is possible to use unit like example below.
-For this example kafka is installed in `/usr/local/kafka/kafka_2.11-1.0.0`
+For this example kafka is installed in `/usr/local/kafka/kafka_2.12-2.5.0`
 
 ```
 [Unit]
@@ -70,7 +77,7 @@ User=kafka
 
 Environment=JAVA=/usr/bin/java
 Environment="KAFKA_USER=kafka"
-Environment="KAFKA_HOME=/usr/local/kafka/kafka_2.11-1.0.0"
+Environment="KAFKA_HOME=/usr/local/kafka/kafka_2.12-2.5.0"
 Environment="SCALA_VERSION=2.11"
 Environment="KAFKA_CONFIG=/usr/local/kafka/config"
 Environment="KAFKA_BIN=/usr/local/kafka/bin"
@@ -102,13 +109,6 @@ To avoid using dynamic TCP port and firewall/NAT issues it is better to set stat
      systemctl restart kafka-service
 
 # Zabbix configuration
-
-#Upload scripts for discovery JMX
-
-     git clone https://github.com/helli0n/kafka-monitoring.git 
-     cd zabbix/kafka
-     cp jmx_discovery /etc/zabbix/externalscripts
-     cp JMXDiscovery-0.0.1.jar /etc/zabbix/externalscripts
 
 ##Import template
 Log in to your zabbix web
@@ -209,7 +209,6 @@ e.g.:
 
 
 # kafka-monitoring
-http://adminotes.com/
 
 https://github.com/helli0n/kafka-monitoring/wiki/Kafka-monitoring
 
@@ -218,5 +217,7 @@ https://engineering.linkedin.com/apache-kafka/burrow-kafka-consumer-monitoring-r
 https://github.com/linkedin/Burrow/wiki
 
 https://community.hortonworks.com/articles/28103/monitoring-kafka-with-burrow.html
+
+https://github.com/yahoo/CMAK
 
 https://github.com/RiotGamesMinions/zabbix_jmxdiscovery
