@@ -1,11 +1,11 @@
 # Welcome to the kafka-monitoring wiki!
 
 ## Requirements
-Solutions tested:<br />
-Zabbix 4.4+<br />
-Kafka 2+<br />
-Burrow<br />
-CMAK
+Solutions tested on:
+    Zabbix 4.4+
+    Kafka 2+
+    Burrow
+    CMAK
 
 ## First you have to install zabbix-java-gataway
     yum install -y zabbix-java-gataway
