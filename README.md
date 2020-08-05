@@ -2,10 +2,12 @@
 
 ## Requirements
 Solutions tested on:
-`   Zabbix 4.4+
-    Kafka 2+
-    Burrow
-    CMAK`
+```
+Zabbix 4.4+
+Kafka 2+
+Burrow
+CMAK
+```
 
 ## First you have to install zabbix-java-gataway
     yum install -y zabbix-java-gataway
