@@ -223,3 +223,9 @@ https://community.hortonworks.com/articles/28103/monitoring-kafka-with-burrow.ht
 https://github.com/yahoo/CMAK
 
 https://github.com/RiotGamesMinions/zabbix_jmxdiscovery
+
+https://zabbix.org/wiki/Docs/howto/zabbix_get_jmx
+
+https://www.zabbix.org/wiki/ConfigureJMX
+
+https://www.zabbix.com/documentation/4.4/manual/discovery/low_level_discovery/jmx
