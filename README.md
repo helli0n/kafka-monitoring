@@ -229,3 +229,5 @@ https://zabbix.org/wiki/Docs/howto/zabbix_get_jmx
 https://www.zabbix.org/wiki/ConfigureJMX
 
 https://www.zabbix.com/documentation/4.4/manual/discovery/low_level_discovery/jmx
+
+https://www.zabbix.com/ru/integrations/kafka
