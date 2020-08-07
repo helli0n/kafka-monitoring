@@ -28,17 +28,17 @@ else:
             for consumers in python_obj["consumers"]:
                 r1 = requests.get(url+consumers+'/lag')
                 if r1.json()["status"]["group"] == consumers:
-                   print(r1.json()["status"]["group"])
+                   #print(r1.json()["status"]["group"])
                    for p in r1.json()["status"]["partitions"]:
                     result["data"].append({
-                       '#CONSUMER}': consumers,
+                       "#{CONSUMER}": consumers,
                        "{#PARTITION}": p["partition"],
                        "{#TOPIC}": p["topic"]
                     })
                 else:
                    print("Issues")
             json_data = json.dumps(result)
-            print(result)
+            print(json_data)
         elif sys.argv[1] == "consumer_status" and len(sys.argv) == 3:
             r1 = requests.get(url+sys.argv[2]+'/status')
             print(Dict.get(r1.json()["status"]["status"]))
