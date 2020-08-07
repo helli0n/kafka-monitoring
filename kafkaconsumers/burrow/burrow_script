@@ -34,7 +34,7 @@ start(){
     if [ -z "$pid" ]; then
         rm -rf $dirburrow/log/burrow.pid
 	echo "Starting burrow"
-	cd $dirburrow && ./burrow --config $dirburrow/burrow.cfg > /dev/null 2>&1 &
+	cd $dirburrow && ./burrow --config-dir $dirburrow/config/  > /dev/null 2>&1 &
 	sleep 3
 	pidckeck
 #	rm -rf $dirburrow/log/burrow.pid
