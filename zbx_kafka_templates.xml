@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-08-05T12:02:33Z</date>
+    <date>2020-08-10T07:08:36Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1055,9 +1055,311 @@
                     <key>jmx.discovery[beans,&quot;kafka.server:type=BrokerTopicMetrics,name=*&quot;]</key>
                     <item_prototypes>
                         <item_prototype>
+                            <name>{#JMXTYPE} BytesInPerSec FifteenMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesInPerSec&quot;,FifteenMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesInPerSec FiveMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesInPerSec&quot;,FiveMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesInPerSec MeanRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesInPerSec&quot;,MeanRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesInPerSec OneMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesInPerSec&quot;,OneMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesOutPerSec FifteenMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesOutPerSec&quot;,FifteenMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesOutPerSec FiveMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesOutPerSec&quot;,FiveMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesOutPerSec MeanRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesOutPerSec&quot;,MeanRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesOutPerSec OneMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesOutPerSec&quot;,OneMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesRejectedPerSec FifteenMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesRejectedPerSec&quot;,FifteenMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesRejectedPerSec FiveMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesRejectedPerSec&quot;,FiveMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesRejectedPerSec MeanRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesRejectedPerSec&quot;,MeanRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} BytesRejectedPerSec OneMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=BytesRejectedPerSec&quot;,OneMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReassignmentBytesOutPerSec FifteenMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReassignmentBytesOutPerSec&quot;,FifteenMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReassignmentBytesOutPerSec FiveMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReassignmentBytesOutPerSec&quot;,FiveMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReassignmentBytesOutPerSec MeanRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReassignmentBytesOutPerSec&quot;,MeanRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReassignmentBytesOutPerSec OneMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReassignmentBytesOutPerSec&quot;,OneMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReplicationBytesOutPerSec FifteenMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReplicationBytesOutPerSec&quot;,FifteenMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReplicationBytesOutPerSec FiveMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReplicationBytesOutPerSec&quot;,FiveMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReplicationBytesOutPerSec MeanRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReplicationBytesOutPerSec&quot;,MeanRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#JMXTYPE} ReplicationBytesOutPerSec OneMinuteRate</name>
+                            <type>JMX</type>
+                            <key>jmx[&quot;kafka.server:type={#JMXTYPE},name=ReplicationBytesOutPerSec&quot;,OneMinuteRate]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>Bps</units>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
+                            <applications>
+                                <application>
+                                    <name>Kafka</name>
+                                </application>
+                            </applications>
+                            <jmx_endpoint>service:jmx:rmi:///jndi/rmi://{HOST.CONN}:{HOST.PORT}/jmxrmi</jmx_endpoint>
+                        </item_prototype>
+                        <item_prototype>
                             <name>{#JMXTYPE} {#JMXNAME} Count</name>
                             <type>JMX</type>
                             <key>jmx[&quot;kafka.server:type={#JMXTYPE},name={#JMXNAME}&quot;,Count]</key>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <applications>
                                 <application>
                                     <name>Kafka</name>
@@ -1070,6 +1372,8 @@
                             <type>JMX</type>
                             <key>jmx[&quot;kafka.server:type={#JMXTYPE},name={#JMXNAME}&quot;,FifteenMinuteRate]</key>
                             <value_type>FLOAT</value_type>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <applications>
                                 <application>
                                     <name>Kafka</name>
@@ -1082,6 +1386,8 @@
                             <type>JMX</type>
                             <key>jmx[&quot;kafka.server:type={#JMXTYPE},name={#JMXNAME}&quot;,FiveMinuteRate]</key>
                             <value_type>FLOAT</value_type>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <applications>
                                 <application>
                                     <name>Kafka</name>
@@ -1094,6 +1400,8 @@
                             <type>JMX</type>
                             <key>jmx[&quot;kafka.server:type={#JMXTYPE},name={#JMXNAME}&quot;,MeanRate]</key>
                             <value_type>FLOAT</value_type>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <applications>
                                 <application>
                                     <name>Kafka</name>
@@ -1106,6 +1414,8 @@
                             <type>JMX</type>
                             <key>jmx[&quot;kafka.server:type={#JMXTYPE},name={#JMXNAME}&quot;,OneMinuteRate]</key>
                             <value_type>FLOAT</value_type>
+                            <username>{$JMX_USER}</username>
+                            <password>{$JMX_PASS}</password>
                             <applications>
                                 <application>
                                     <name>Kafka</name>
