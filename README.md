@@ -81,7 +81,7 @@ User=kafka
 Environment=JAVA=/usr/bin/java
 Environment="KAFKA_USER=kafka"
 Environment="KAFKA_HOME=/usr/local/kafka/kafka_2.12-2.5.0"
-Environment="SCALA_VERSION=2.11"
+Environment="SCALA_VERSION=2.12"
 Environment="KAFKA_CONFIG=/usr/local/kafka/config"
 Environment="KAFKA_BIN=/usr/local/kafka/bin"
 Environment="KAFKA_LOG4J_OPTS=-Dlog4j.configuration=file:/usr/local/kafka/config/log4j.properties"
