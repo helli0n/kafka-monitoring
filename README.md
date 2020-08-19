@@ -190,15 +190,15 @@ You should change config file in /opt/burrow/burrow.cfg
 ## Copy files to zabbix folder
      cp kafka_consumers.sh /etc/zabbix/
      cp userparameter_kafkaconsumer.conf /etc/zabbix/zabbix_agentd.d
-#####Start burrow and restart zabbix-agent
+##### Start burrow and restart zabbix-agent
      /etc/init.d/burrow_script start
      /etc/init.d/zabbix-agent restart
 ## For using python script copy files to zabbix folder
      cp kafka_consumers.py /etc/zabbix/
      cp userparameter_kafkaconsumer_py.conf /etc/zabbix/zabbix_agentd.d
-#####Install python libs
+##### Install python libs
     pip install requests
-#####Start burrow and restart zabbix-agent
+##### Start burrow and restart zabbix-agent
      /etc/init.d/burrow_script start
      /etc/init.d/zabbix-agent restart
 
@@ -217,7 +217,7 @@ e.g.:
      "{#TOPIC}": "TOPIC1"
      }]}
 
-######For using Grafana
+###### For using Grafana
 Need to deploy grafana-xxl docker container and add zabbix server as a source.
 Upload Grafana dashboard template
 
