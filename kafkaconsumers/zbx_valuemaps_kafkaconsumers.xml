@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.0</version>
-    <date>2016-08-12T06:33:38Z</date>
+    <version>4.4</version>
+    <date>2020-08-17T11:45:37Z</date>
     <value_maps>
         <value_map>
-            <name>Kafka cunsumers status</name>
+            <name>Kafka consumers status</name>
             <mappings>
                 <mapping>
                     <value>0</value>

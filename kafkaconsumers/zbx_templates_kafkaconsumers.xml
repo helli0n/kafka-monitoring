@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-08-05T11:45:58Z</date>
+    <date>2020-08-17T11:44:42Z</date>
     <groups>
         <group>
             <name>Kafka</name>
@@ -32,7 +32,7 @@
                     <lifetime>15d</lifetime>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Consumer {#CONSUMER} lag end on {#TOPIC}</name>
+                            <name>Consumer {#CONSUMER} lag end on {#TOPIC} partition {#PARTITION}</name>
                             <key>kafkaconsumer[consumer_lag,&quot;{#CONSUMER}&quot;,end,{#PARTITION},{#TOPIC}]</key>
                             <delay>30</delay>
                             <history>15d</history>
@@ -44,7 +44,7 @@
                             </applications>
                         </item_prototype>
                         <item_prototype>
-                            <name>Consumer {#CONSUMER} lag start on {#TOPIC}</name>
+                            <name>Consumer {#CONSUMER} lag start on {#TOPIC} partition {#PARTITION}</name>
                             <key>kafkaconsumer[consumer_lag,&quot;{#CONSUMER}&quot;,start,{#PARTITION},{#TOPIC}]</key>
                             <delay>30</delay>
                             <history>15d</history>
@@ -56,7 +56,7 @@
                             </applications>
                         </item_prototype>
                         <item_prototype>
-                            <name>Consumer {#CONSUMER} offsets end on {#TOPIC}</name>
+                            <name>Consumer {#CONSUMER} offsets end on {#TOPIC} partition {#PARTITION}</name>
                             <key>kafkaconsumer[consumer_offsets,&quot;{#CONSUMER}&quot;,end,{#PARTITION},{#TOPIC}]</key>
                             <delay>30</delay>
                             <history>15d</history>
@@ -68,7 +68,7 @@
                             </applications>
                         </item_prototype>
                         <item_prototype>
-                            <name>Consumer {#CONSUMER} offsets start on {#TOPIC}</name>
+                            <name>Consumer {#CONSUMER} offsets start on {#TOPIC} partition {#PARTITION}</name>
                             <key>kafkaconsumer[consumer_offsets,&quot;{#CONSUMER}&quot;,start,{#PARTITION},{#TOPIC}]</key>
                             <delay>30</delay>
                             <history>15d</history>
@@ -80,8 +80,20 @@
                             </applications>
                         </item_prototype>
                         <item_prototype>
-                            <name>Consumer {#CONSUMER} offsets status on {#TOPIC}</name>
-                            <key>kafkaconsumer[consumer_offsets_status,&quot;{#CONSUMER}&quot;,{#PARTITION},{#TOPIC}]</key>
+                            <name>Consumer {#CONSUMER} current lag on {#TOPIC} partition {#PARTITION}</name>
+                            <key>kafkaconsumer[consumer_offsets_partition_current_lag,&quot;{#CONSUMER}&quot;,{#PARTITION},{#TOPIC}]</key>
+                            <delay>30</delay>
+                            <history>15d</history>
+                            <trends>30d</trends>
+                            <applications>
+                                <application>
+                                    <name>KafkaConsumer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Consumer {#CONSUMER} offsets status on {#TOPIC} partition {#PARTITION}</name>
+                            <key>kafkaconsumer[consumer_offsets_partition_status,&quot;{#CONSUMER}&quot;,{#PARTITION},{#TOPIC}]</key>
                             <delay>30</delay>
                             <history>15d</history>
                             <trends>30d</trends>
@@ -91,7 +103,7 @@
                                 </application>
                             </applications>
                             <valuemap>
-                                <name>Kafka cunsumers status</name>
+                                <name>Kafka consumers status</name>
                             </valuemap>
                         </item_prototype>
                         <item_prototype>
@@ -106,7 +118,7 @@
                                 </application>
                             </applications>
                             <valuemap>
-                                <name>Kafka cunsumers status</name>
+                                <name>Kafka consumers status</name>
                             </valuemap>
                             <trigger_prototypes>
                                 <trigger_prototype>
@@ -204,7 +216,7 @@
     </templates>
     <value_maps>
         <value_map>
-            <name>Kafka cunsumers status</name>
+            <name>Kafka consumers status</name>
             <mappings>
                 <mapping>
                     <value>0</value>
