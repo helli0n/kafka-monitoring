@@ -7,6 +7,7 @@ Zabbix 4.4+
 Kafka 2+
 Burrow
 CMAK
+Grafana
 ```
 
 ## First you have to install zabbix-java-gataway
@@ -189,9 +190,18 @@ You should change config file in /opt/burrow/burrow.cfg
 ## Copy files to zabbix folder
      cp kafka_consumers.sh /etc/zabbix/
      cp userparameter_kafkaconsumer.conf /etc/zabbix/zabbix_agentd.d
-     Start burrow and restart zabbix-agent
+#####Start burrow and restart zabbix-agent
      /etc/init.d/burrow_script start
      /etc/init.d/zabbix-agent restart
+## For using python script copy files to zabbix folder
+     cp kafka_consumers.py /etc/zabbix/
+     cp userparameter_kafkaconsumer_py.conf /etc/zabbix/zabbix_agentd.d
+#####Install python libs
+    pip install requests
+#####Start burrow and restart zabbix-agent
+     /etc/init.d/burrow_script start
+     /etc/init.d/zabbix-agent restart
+
 Upload template [zbx_templates_kafkaconsumers.xml](https://github.com/helli0n/kafka-monitoring/blob/master/kafkaconsumers/zbx_templates_kafkaconsumers.xml) and mapping value [zbx_valuemaps_kafkaconsumers.xml](https://github.com/helli0n/kafka-monitoring/blob/master/kafkaconsumers/zbx_valuemaps_kafkaconsumers.xml) to zabbix server using UI and link template to Kafka host
 # Troubleshooting 
 If it doesn't work you can check it use **/etc/zabbix/kafka_consumers.sh**
@@ -207,8 +217,9 @@ e.g.:
      "{#TOPIC}": "TOPIC1"
      }]}
 
-
-
+######For using Grafana
+Need to deploy grafana-xxl docker container and add zabbix server as a source.
+Upload Grafana dashboard template
 
 # kafka-monitoring
 
@@ -231,3 +242,5 @@ https://www.zabbix.org/wiki/ConfigureJMX
 https://www.zabbix.com/documentation/4.4/manual/discovery/low_level_discovery/jmx
 
 https://www.zabbix.com/ru/integrations/kafka
+
+https://github.com/monitoringartist/grafana-xxl
