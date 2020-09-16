@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-08-17T11:44:42Z</date>
+    <date>2020-09-16T14:17:31Z</date>
     <groups>
         <group>
             <name>Kafka</name>
@@ -106,63 +106,6 @@
                                 <name>Kafka consumers status</name>
                             </valuemap>
                         </item_prototype>
-                        <item_prototype>
-                            <name>Consumer {#CONSUMER} status</name>
-                            <key>kafkaconsumer[consumer_status,&quot;{#CONSUMER}&quot;]</key>
-                            <delay>30</delay>
-                            <history>15d</history>
-                            <trends>30d</trends>
-                            <applications>
-                                <application>
-                                    <name>KafkaConsumer</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>Kafka consumers status</name>
-                            </valuemap>
-                            <trigger_prototypes>
-                                <trigger_prototype>
-                                    <expression>{last()}=3</expression>
-                                    <name>Consumer {#CONSUMER} has ERR status</name>
-                                    <priority>AVERAGE</priority>
-                                </trigger_prototype>
-                                <trigger_prototype>
-                                    <expression>{last()}=2</expression>
-                                    <name>Consumer {#CONSUMER} has WARN status</name>
-                                    <priority>WARNING</priority>
-                                </trigger_prototype>
-                            </trigger_prototypes>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Consumer {#CONSUMER} Total Lag</name>
-                            <key>kafkaconsumer[consumer_tottallag,&quot;{#CONSUMER}&quot;]</key>
-                            <delay>30</delay>
-                            <history>15d</history>
-                            <trends>30d</trends>
-                            <applications>
-                                <application>
-                                    <name>KafkaConsumer</name>
-                                </application>
-                            </applications>
-                            <trigger_prototypes>
-                                <trigger_prototype>
-                                    <expression>{last()}&gt;0 and {last()}&lt;100</expression>
-                                    <name>Consumer {#CONSUMER} has lag more than 1</name>
-                                    <priority>WARNING</priority>
-                                </trigger_prototype>
-                                <trigger_prototype>
-                                    <expression>{last()}&gt;100</expression>
-                                    <name>Consumer {#CONSUMER} has lag more than 100</name>
-                                    <priority>AVERAGE</priority>
-                                    <dependencies>
-                                        <dependency>
-                                            <name>Consumer {#CONSUMER} has lag more than 1</name>
-                                            <expression>{KafkaConsumers:kafkaconsumer[consumer_tottallag,&quot;{#CONSUMER}&quot;].last()}&gt;0 and {KafkaConsumers:kafkaconsumer[consumer_tottallag,&quot;{#CONSUMER}&quot;].last()}&lt;100</expression>
-                                        </dependency>
-                                    </dependencies>
-                                </trigger_prototype>
-                            </trigger_prototypes>
-                        </item_prototype>
                     </item_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
@@ -184,14 +127,6 @@
                                     </item>
                                 </graph_item>
                                 <graph_item>
-                                    <sortorder>2</sortorder>
-                                    <color>FC6EA3</color>
-                                    <item>
-                                        <host>KafkaConsumers</host>
-                                        <key>kafkaconsumer[consumer_tottallag,&quot;{#CONSUMER}&quot;]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
                                     <sortorder>3</sortorder>
                                     <color>2774A4</color>
                                     <item>
@@ -210,6 +145,32 @@
                             </graph_items>
                         </graph_prototype>
                     </graph_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Kafka Consumers status</name>
+                    <key>kafkaconsumer[discovery_consumers]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Consumer {#CONSUMER} status</name>
+                            <key>kafkaconsumer[consumer_status,&quot;{#CONSUMER}&quot;]</key>
+                            <delay>30</delay>
+                            <applications>
+                                <application>
+                                    <name>KafkaConsumer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Consumer {#CONSUMER} Total Lag</name>
+                            <key>kafkaconsumer[consumer_tottallag,&quot;{#CONSUMER}&quot;]</key>
+                            <delay>30</delay>
+                            <applications>
+                                <application>
+                                    <name>KafkaConsumer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
                 </discovery_rule>
             </discovery_rules>
         </template>

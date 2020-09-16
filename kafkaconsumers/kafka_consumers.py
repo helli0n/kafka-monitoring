@@ -14,7 +14,8 @@ def my_help():
          ./kafka_consumers.py consumer_offsets_partition_current_lag {#CONSUMER} {#PARTITION} {#TOPIC}\n\
          ./kafka_consumers.py consumer_lag {#CONSUMER} start|end {#PARTITION} {#TOPIC}")
 
-host1 = socket.gethostbyname(socket.gethostname())
+#host1 = socket.gethostbyname(socket.gethostname())
+host1 = '192.168.88.195'
 url = ('http://'+host1+':8000/v3/kafka/local/consumer/')
 Dict = {'NOTFOUND': 0, 'OK': 1, 'WARN': 2, 'ERR': 3, 'STOP': 4, 'STALL': 5}
 if len(sys.argv) <= 1:
@@ -38,6 +39,17 @@ else:
                     })
                 else:
                    print("Issues")
+            json_data = json.dumps(result)
+            print(json_data)
+        elif sys.argv[1] == "discovery_consumers":
+            r = requests.get(url)
+            python_obj = r.json()
+            result = {}
+            result["data"] = []
+            for consumers in python_obj["consumers"]:
+                result["data"].append({
+                  "{#CONSUMER}": consumers
+                })
             json_data = json.dumps(result)
             print(json_data)
         elif sys.argv[1] == "consumer_status" and len(sys.argv) == 3:
