@@ -40,6 +40,17 @@ else:
                    print("Issues")
             json_data = json.dumps(result)
             print(json_data)
+        elif sys.argv[1] == "discovery_consumers":
+            r = requests.get(url)
+            python_obj = r.json()
+            result = {}
+            result["data"] = []
+            for consumers in python_obj["consumers"]:
+                result["data"].append({
+                  "{#CONSUMER}": consumers
+                })
+            json_data = json.dumps(result)
+            print(json_data)
         elif sys.argv[1] == "consumer_status" and len(sys.argv) == 3:
             r1 = requests.get(url+sys.argv[2]+'/status')
             print(Dict.get(r1.json()["status"]["status"]))
