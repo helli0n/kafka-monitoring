@@ -14,8 +14,7 @@ def my_help():
          ./kafka_consumers.py consumer_offsets_partition_current_lag {#CONSUMER} {#PARTITION} {#TOPIC}\n\
          ./kafka_consumers.py consumer_lag {#CONSUMER} start|end {#PARTITION} {#TOPIC}")
 
-#host1 = socket.gethostbyname(socket.gethostname())
-host1 = '192.168.88.195'
+host1 = socket.gethostbyname(socket.gethostname())
 url = ('http://'+host1+':8000/v3/kafka/local/consumer/')
 Dict = {'NOTFOUND': 0, 'OK': 1, 'WARN': 2, 'ERR': 3, 'STOP': 4, 'STALL': 5}
 if len(sys.argv) <= 1:
